@@ -1,4 +1,4 @@
-const url = `https://raw.githubusercontent.com/0x0916/linux-note/main${window.location.pathname.replace('/linux', '').replace('/source', '')}.json`;
+const url = `https://raw.githubusercontent.com/0x0916/linux-note/main${window.location.pathname.replace('/mtkernel', '').replace('/linux', '').replace('/source', '')}.json`;
 
 function pauseEvent(e) {
   if(e.stopPropagation) e.stopPropagation();
@@ -64,7 +64,7 @@ fetch(url).then(function(response){return response.json()})
       closeNode.appendChild(closeTextNode);
       closeNode.style.cssText = `
         position: absolute;
-        right: -6px;
+        left: -6px;
         top: -7px;
         background: #333;
         color: #fff;
@@ -85,10 +85,11 @@ fetch(url).then(function(response){return response.json()})
 
       fragment.style.cssText = `
         position: absolute;
-        width: 300px;
+        min-width: 300px;
+	width: 25vw;
         height: auto;
         z-index: 10;
-        left: calc(100vw - 557px);
+        left: 660px;
         top: -9px;
         white-space: pre-wrap;
         display: block;
@@ -101,20 +102,22 @@ fetch(url).then(function(response){return response.json()})
         border-radius: 8px;
         cursor: pointer;
         backdrop-filter: blur(2px);
-        transition: left .3s ease;
+        transition: all .3s ease;
       `;
 
       element.appendChild(fragment);
       dragElement(fragment);
 
       element.addEventListener('mouseenter', function(e) {
-        fragment.style.left = `calc(100vw - 557px)`;
-        pauseEvent(e);
+        //fragment.style.left = `660px`;
+        fragment.style.display = 'block';
+	pauseEvent(e);
       });
 
       closeNode.addEventListener('click', function(e) {
-        fragment.style.left = 'calc(100vw - 255px)';
-        pauseEvent(e);
+        //fragment.style.left = 'calc(100vw - 255px)';
+        fragment.style.display = 'none';
+	pauseEvent(e);
       });
     });
   })

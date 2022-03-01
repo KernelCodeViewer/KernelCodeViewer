@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://elixir.bootlin.com/linux/*"],
+      "matches": ["*://xr-hulk-k8s-node1931.gh.sankuai.com/*"],
       "js": ["popup.js"]
     }
   ],
