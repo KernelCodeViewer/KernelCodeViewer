@@ -1,4 +1,4 @@
-const url = `https://raw.githubusercontent.com/0x0916/linux-note/main${window.location.pathname.replace('/mtkernel', '').replace('/linux', '').replace('/source', '')}.json`;
+const url = `https://raw.githubusercontent.com/KernelCodeViewer/KernelNotes/main${window.location.pathname.replace('/mtkernel', '').replace('/linux', '').replace('/source', '')}.json`;
 
 function pauseEvent(e) {
   if(e.stopPropagation) e.stopPropagation();
@@ -57,7 +57,7 @@ fetch(url).then(function(response){return response.json()})
       element.style.position = 'relative';
       element.style.pointerEvents = 'unset';
       const fragment = document.createElement('span');
-      const textNode = document.createTextNode(`【L${note.line}:】${note.note}——by 王龙`);
+      const textNode = document.createTextNode(`【L${note.line}:】${note.note}——by @KernelCodeViewer`);
 
       const closeNode = document.createElement('span');
       const closeTextNode = document.createTextNode('x');

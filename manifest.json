@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "markup",
-  "description": "save markup and fill page with markup by url",
+  "name": "KernelCodeViewer",
+  "description": "Get Kernel notes and fill page with KernelCodeViewer by url",
   "version": "1.0",
   "page_action": {
     "default_icon": "icon.png",
