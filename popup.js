@@ -1,4 +1,4 @@
-const url = `https://raw.githubusercontent.com/KernelCodeViewer/KernelNotes/main${window.location.pathname.replace('/mtkernel', '').replace('/linux', '').replace('/source', '')}.json`;
+const url = `https://raw.githubusercontent.com/KernelCodeViewer/KernelNotes/main${window.location.pathname.replace('/linux', '').replace('/source', '')}.json`;
 
 function pauseEvent(e) {
   if(e.stopPropagation) e.stopPropagation();
