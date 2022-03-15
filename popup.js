@@ -89,7 +89,7 @@ fetch(url).then(function(response){return response.json()})
 	width: 25vw;
         height: auto;
         z-index: 10;
-        left: 660px;
+        left: 790px;
         top: -9px;
         white-space: pre-wrap;
         display: block;
