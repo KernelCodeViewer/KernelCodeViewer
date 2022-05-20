@@ -57,7 +57,7 @@ fetch(url).then(function(response){return response.json()})
       element.style.position = 'relative';
       element.style.pointerEvents = 'unset';
       const fragment = document.createElement('span');
-      const textNode = document.createTextNode(`【L${note.line}:】${note.note}——by @KernelCodeViewer`);
+      const textNode = document.createTextNode(`【L${note.line}】${note.note}——by @KernelCodeViewer`);
 
       const closeNode = document.createElement('span');
       const closeTextNode = document.createTextNode('x');
